@@ -16,4 +16,16 @@ module ApplicationHelper
     end
   end
 
+  def success_link_to text, href
+    content_tag :a, class: 'btn btn-success', href: href do
+      text
+    end
+  end
+
+  def default_link_to text, href
+    content_tag :a, class: 'btn btn-default', href: href do
+      text
+    end
+  end
+
 end
