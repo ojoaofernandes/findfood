@@ -28,4 +28,8 @@ module ApplicationHelper
     end
   end
 
+  def success_form_submit form
+    form.submit nil, class: "btn btn-success"
+  end
+
 end

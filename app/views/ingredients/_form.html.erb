@@ -1,22 +1,26 @@
 <%= form_with(model: ingredient, local: true) do |form| %>
-  <% if ingredient.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ingredient.errors.count, "error") %> prohibited this ingredient from being saved:</h2>
+<% if ingredient.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(ingredient.errors.count, "error") %> prohibited this ingredient from being saved:</h2>
 
-      <ul>
-      <% ingredient.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <ul>
+    <% ingredient.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :ingredient_name, class: "form-control" %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :ingredient_name %>
+    <div class="actions">
+      <%= success_form_submit form %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>
