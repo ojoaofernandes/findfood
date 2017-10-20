@@ -5,6 +5,8 @@
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
+      <th>Restaurant</th>
+      <th>Category</th>
       <th>Name</th>
       <th>Prepare time</th>
       <th>Price</th>
@@ -15,6 +17,8 @@
   <tbody>
     <% @dishes.each do |dish| %>
       <tr>
+        <td><%= dish.restaurant.name %></td>
+        <td><%= dish.category.name %></td>
         <td><%= dish.name %></td>
         <td><%= dish.prepare_time %></td>
         <td><%= dish.price %></td>
