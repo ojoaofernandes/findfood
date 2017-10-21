@@ -4,7 +4,7 @@ class DishesController < ApplicationController
   # GET /dishes
   # GET /dishes.json
   def index
-    @dishes = Dish.all.order :name
+    @dishes = Dish.all_ordered
   end
 
   # GET /dishes/new
