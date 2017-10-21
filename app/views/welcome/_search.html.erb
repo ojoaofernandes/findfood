@@ -1,11 +1,11 @@
 <div class="panel panel-default">
   <div class="panel-heading">Search</div>
   <div class="panel-body">
-    <%= form_tag welcome_index_path, method: "POST" do %>
+    <%= form_tag welcome_index_path, method: 'GET' do %>
       <div class="form-group">
-        <%= text_field_tag :title, nil, class: "form-control", placeholder: "Enter some ingredient" %>
+        <%= text_field_tag :dish, nil, class: "form-control", placeholder: "What you are looking for?" %>
       </div>
-    <%= submit_tag "Search", class: 'btn btn-default btn-block' %>
+    <%= submit_tag "Search", name: nil, class: 'btn btn-default btn-block' %>
     <% end %>
   </div>
 </div>
