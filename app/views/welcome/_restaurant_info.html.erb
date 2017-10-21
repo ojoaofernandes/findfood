@@ -1,9 +1,27 @@
 <%= title restaurant.name %>
 
-<div class="row">
-  <% restaurant.dishes.each do |dish| %>
+<address>
+  <p>
+    <i class="glyphicon glyphicon-map-marker"></i>
+    <%= restaurant.address %>
+  </p>
+
+  <p>
+    <i class="glyphicon glyphicon-phone-alt"></i>
+    <%= restaurant.phone %>
+  </p>
+  <hr>
+</address>
+
+<% if restaurant.dishes.length > 1 %>
+  <h3>Dishes</h3>
+  <div class="row">
+    <% restaurant.dishes.each do |dish| %>
     <div class="col-sm-6">
       <%= render 'dish', dish: dish %>
     </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% else %>
+  <p class="text-danger">No dishes found.</p>
+<% end %>
