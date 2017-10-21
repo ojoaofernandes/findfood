@@ -1,5 +1,6 @@
 <h4>Categories</h4>
 <div class="list-group">
+  <%= link_to "All", welcome_index_path, class: "list-group-item"%>
   <% @categories.each do |category| %>
     <%= link_to category.name, welcome_index_path(category_id: category.id), class: "list-group-item"%>
   <% end %>
