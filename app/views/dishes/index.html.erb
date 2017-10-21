@@ -11,7 +11,7 @@
       <th>Ingredients</th>
       <th>Prepare time</th>
       <th>Price</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -30,9 +30,8 @@
         </td>
         <td><%= dish.prepare_time %></td>
         <td><%= dish.price %></td>
-        <td><%= link_to 'Show', dish %></td>
-        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
-        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="action"><%= link_to 'Edit', edit_dish_path(dish) %></td>
+        <td class="action"><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
