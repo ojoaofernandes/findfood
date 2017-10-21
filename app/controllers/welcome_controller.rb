@@ -1,7 +1,13 @@
 class WelcomeController < ApplicationController
   def index
-    @restaurants = Restaurant.all.order :name
-    @categories  = Category.all.order :name
+    if params[:category_id].blank?
+      @restaurants = Restaurant.all.order :name
+    else
+      @restaurants = Restaurant.joins(:dishes).where('dishes.category_id': params[:category_id])
+    end
+
+    @categories = Category.all.order :name
+
     render layout: 'public'
   end
 
