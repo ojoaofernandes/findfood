@@ -2,9 +2,7 @@
   <% @restaurants.each do |restaurant| %>
   <div class="col-sm-4">
     <div class="panel panel-danger text-center">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= restaurant.name %></h3>
-      </div>
+      <div class="panel-heading"><%= restaurant.name %></div>
       <div class="panel-body">
         <%= default_link_to 'See dishes', welcome_restaurant_path(restaurant_id: restaurant.id, search: params[:search])%>
       </div>

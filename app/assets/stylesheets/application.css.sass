@@ -17,29 +17,48 @@
 @import "bootstrap-sprockets"
 @import "bootstrap"
 
+$white: #ffffff
+$red: #bc2026
+$red_light: #cc5c5c
+
+.container
+  margin-bottom: 50px
+
 .navbar
-  background: #bc2026
+  background: $red
 
   .navbar-brand
-    color: #FFF
+    color: $white
 
     &:hover, &:focus
-      color: #FFF
+      color: $white
 
   .navbar-nav
     li, .active
       a
-        color: #FFF
+        color: $white
 
         &:hover, &:focus
           background-color: rgba(255, 255, 255, .25)
-          color: #FFF
+          color: $white
 
     .active
       a
         background-color: rgba(255, 255, 255, .1)
 
+.page-header
+  margin-top: 0
+
+  h2
+    margin-top: 0
+
 .table
   .action
     width: 75px
     text-align: center
+
+.panel
+  .panel-heading
+    background-color: $red_light
+    color: $white
+    font-weight: bold
