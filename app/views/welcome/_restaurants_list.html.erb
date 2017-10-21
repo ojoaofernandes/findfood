@@ -6,7 +6,7 @@
         <h3 class="panel-title"><%= restaurant.name %></h3>
       </div>
       <div class="panel-body">
-        <%= default_link_to 'See dishes', welcome_restaurant_path(restaurant_id: restaurant.id)%>
+        <%= default_link_to 'See dishes', welcome_restaurant_path(restaurant_id: restaurant.id, search: params[:search])%>
       </div>
     </div>
   </div>

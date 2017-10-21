@@ -18,7 +18,7 @@
   <div class="row">
     <% restaurant.dishes.each do |dish| %>
     <div class="col-sm-6">
-      <%= render 'dish', dish: dish %>
+      <%= render 'dish', dish: dish, search: search %>
     </div>
     <% end %>
   </div>
