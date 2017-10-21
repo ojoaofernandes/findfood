@@ -7,7 +7,6 @@ class WelcomeController < ApplicationController
     end
 
     @categories = Category.all.order :name
-
     render layout: 'public'
   end
 
