@@ -7,11 +7,6 @@ class DishesController < ApplicationController
     @dishes = Dish.all.order :name
   end
 
-  # GET /dishes/1
-  # GET /dishes/1.json
-  def show
-  end
-
   # GET /dishes/new
   def new
     @dish = Dish.new

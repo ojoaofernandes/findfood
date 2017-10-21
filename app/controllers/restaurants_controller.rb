@@ -7,11 +7,6 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all.order :name
   end
 
-  # GET /restaurants/1
-  # GET /restaurants/1.json
-  def show
-  end
-
   # GET /restaurants/new
   def new
     @restaurant = Restaurant.new
@@ -28,7 +23,7 @@ class RestaurantsController < ApplicationController
 
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+        format.html { redirect_to restaurants_url, notice: 'Restaurant was successfully created.' }
         format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }
@@ -42,7 +37,7 @@ class RestaurantsController < ApplicationController
   def update
     respond_to do |format|
       if @restaurant.update(restaurant_params)
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully updated.' }
+        format.html { redirect_to restaurants_url, notice: 'Restaurant was successfully updated.' }
         format.json { render :show, status: :ok, location: @restaurant }
       else
         format.html { render :edit }
