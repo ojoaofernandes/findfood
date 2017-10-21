@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @categories = Category.all.order :name
+    @restaurants = Restaurant.all.order :name
+    @categories  = Category.all.order :name
     render layout: 'public'
   end
 end
