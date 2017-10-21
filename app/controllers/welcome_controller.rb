@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
     if params[:category_id].blank?
       @restaurants = Restaurant.all_ordered
     else
-      @restaurants = Restaurant.joins(:dishes).where('dishes.category_id': params[:category_id])
+      @restaurants = Restaurant.joins(:dishes).where('dishes.category_id': params[:category_id]).distinct
     end
 
     @categories = Category.all_ordered
