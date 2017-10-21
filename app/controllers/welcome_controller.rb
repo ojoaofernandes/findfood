@@ -10,6 +10,7 @@ class WelcomeController < ApplicationController
       redirect_to welcome_index_url
     end
 
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @categories = Category.all.order :name
     render layout: 'public'
   end

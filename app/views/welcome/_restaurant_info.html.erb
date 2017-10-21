@@ -1,0 +1,9 @@
+<%= title restaurant.name %>
+
+<div class="row">
+  <% restaurant.dishes.each do |dish| %>
+    <div class="col-sm-6">
+      <%= render 'dish', dish: dish %>
+    </div>
+  <% end %>
+</div>
