@@ -16,3 +16,28 @@
 
 @import "bootstrap-sprockets"
 @import "bootstrap"
+
+.navbar
+  background: #bc2026
+
+  .navbar-brand
+    color: #FFF
+
+    &:hover, &:focus
+      color: #FFF
+
+  .navbar-nav
+    li, .active
+      a
+        color: #FFF
+
+        &:hover, &:focus
+          background-color: rgba(255, 255, 255, .25)
+          color: #FFF
+
+    .active
+      a
+        background-color: rgba(255, 255, 255, .1)
+
+.jumbotron
+  padding: 20px
