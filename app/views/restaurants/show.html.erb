@@ -12,5 +12,6 @@
   <%= @restaurant.address %>
 </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<%= default_link_to 'Edit', edit_restaurant_path(@restaurant) %>
+<hr>
+
